@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/icon.ico">
+    <link rel="stylesheet" href="style.css">
+    <title>Spelling error corrector</title>
+</head>
+<body>
+    <canvas id="starsCanvas"></canvas>
+
+    <div class="container">
+        <div class="text-container">
+            <h1>Welcome!</h1>
+            <h2>Paste ur text below and it would fix all of the spelling errors</h2>
+        </div>
+        <div class="corrector-container">
+            <div class="input-container">
+                <textarea id="user-input" placeholder="Paste your text here..." rows="15"></textarea>
+                <br><br>
+                <button id="submit-btn">correct</button>
+            </div>
+            <br><br>
+            <div class="corrected-text-container" id="corrected-text"></div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+    <script src="bg.js"></script> 
+</body>
+</html>

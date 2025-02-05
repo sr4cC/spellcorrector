@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lilita+One&family=Righteous&display=swap');
+
+body {
+    font-family: "Kanit", serif;
+    font-weight: 100;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    background-color: #0c0c0c;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrolling */
+    position: relative; /* Make sure the content stays above the canvas */
+}
+
+#starsCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure the canvas is behind all other content */
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    position: relative; /* Keep content above the canvas */
+}
+
+.text-container {
+    width: 100%;
+    max-width: 990px;
+    text-align: center;
+    background-color: #111111;
+    border-radius: 15px;
+    padding: 5px;
+    margin-top: 10px;
+    box-shadow: 0 0 20px 5px rgb(31, 31, 31);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+textarea {
+    resize: none;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 90%;
+    margin-top: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    color: #333;
+    box-shadow: 0 0 20px 5px rgba(128, 128, 128, 0.6);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+textarea:focus {
+    outline: none;
+    background-color: #e6e6e6;
+    box-shadow: 0 0 15px rgba(128, 128, 128, 0.6);
+}
+
+.corrector-container {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #2a2a2a;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    min-height: 80vh;
+    box-shadow: 0 0 20px 5px rgb(31, 31, 31);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+button {
+    position: relative;
+    font: inherit;
+    background-color: #f0f0f0;
+    border: 0;
+    color: #242424;
+    border-radius: 0.5em;
+    font-size: 3rem;
+    padding: 0.155em 1em;
+    font-weight: 600;
+    text-shadow: 0 0.0625em 0 #fff;
+    box-shadow: inset 0 0.0625em 0 0 #f4f4f4, 0 0.0625em 0 0 #efefef,
+        0 0.125em 0 0 #ececec, 0 0.25em 0 0 #e0e0e0, 0 0.3125em 0 0 #dedede,
+        0 0.375em 0 0 #dcdcdc, 0 0.425em 0 0 #cacaca, 0 0.425em 0.5em 0 #cecece;
+    transition: 0.25s ease;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+button:hover {
+    transform: translateY(0.225em);
+    box-shadow: inset 0 0.03em 0 0 #f4f4f4, 0 0.03em 0 0 #efefef,
+        0 0.0625em 0 0 #ececec, 0 0.125em 0 0 #e0e0e0, 0 0.125em 0 0 #dedede,
+        0 0.2em 0 0 #dcdcdc, 0 0.225em 0 0 #cacaca, 0 0.225em 0.375em 0 #cecece;
+}
+
+.corrected-text-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bot-message {
+    padding: 5px;
+    margin: 5px;
+    width: 50%;
+    background-color: #181818;
+    border-radius: 10px;
+    box-shadow: 0 0 80px 5px rgb(36, 36, 36);
+    transition: box-shadow 0.3s ease-in-out;
+}
